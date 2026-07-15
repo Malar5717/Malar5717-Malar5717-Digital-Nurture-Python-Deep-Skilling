@@ -30,23 +30,23 @@ def hello_view(req):
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # class CourseDetailView(APIView):
-    def get(self, req, pk): # pk - primary key
-        course = get_object_or_404(Course, pk=pk)
-        serializer = CourseSerializer(course)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+    # def get(self, req, pk): # pk - primary key
+    #     course = get_object_or_404(Course, pk=pk)
+    #     serializer = CourseSerializer(course)
+    #     return Response(serializer.data, status=status.HTTP_200_OK)
     
-    def put(self, req, pk):
-        course = get_object_or_404(Course, pk=pk)
-        serializer = CourseSerializer(course, data=req.data) # overwrite
-        if(serializer.is_valid()):
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def put(self, req, pk):
+    #     course = get_object_or_404(Course, pk=pk)
+    #     serializer = CourseSerializer(course, data=req.data) # overwrite
+    #     if(serializer.is_valid()):
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_200_OK)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    def delete(self, req, pk):
-        course = get_object_or_404(Course, pk=pk)
-        course.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    # def delete(self, req, pk):
+    #     course = get_object_or_404(Course, pk=pk)
+    #     course.delete()
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
 
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
