@@ -14,10 +14,18 @@ def create_course():
 
     new_course = {
         "id": len(COURSES_DATA) + 1,
-        "title": data.get("title", "Untitled Course"),
-        "code": data.get("code", "UNKNOWN")
+        "name": data.get("name", "UNKNOWN"),
+        "code": data.get("code", "UNKNOWN"),
+        "credits": data.get("credits", "UNKOWN"),
     }
     COURSES_DATA.append(new_course)
 
     return jsonify(new_course), 201
 
+def response(data):
+    response = {
+        'status': 'success',
+        'data': data
+    }
+
+    return jsonify(response), 200
