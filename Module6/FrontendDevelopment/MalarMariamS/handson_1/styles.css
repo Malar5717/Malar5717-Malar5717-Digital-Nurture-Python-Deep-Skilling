@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(255, 105, 180, 0.8);
+}
+
+header {
+    padding: 10px;
+    background-color: paleturquoise;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+}
+nav li {
+    display: inline;
+    margin-left: 10px;
+}
+
+#hero {
+    text-align: center;
+    padding: 5%;
+}
+
+button {
+    padding: 4px;
+    border-radius: 8px;
+    background-color: hotpink;
+    border: 2px solid rgb(225, 9, 117);
+}
+button:hover {
+    scale: 1.1;
+    color: honeydew;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+.course {
+    padding: 20px;
+    margin: 20px;
+    border: 4px dashed hotpink;
+}
