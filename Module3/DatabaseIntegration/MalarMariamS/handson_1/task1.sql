@@ -60,3 +60,4 @@ create table professors (
 		FOREIGN KEY (department_id)
 		REFERENCES departments(department_id)
 );
+
